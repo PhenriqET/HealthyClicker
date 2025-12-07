@@ -1,0 +1,248 @@
+[gd_scene load_steps=18 format=3 uid="uid://cn1ftdp20yrcc"]
+
+[ext_resource type="Texture2D" uid="uid://clfxoj5a47eoy" path="res://Images/Stickman Gordo.png" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://b515h44x40nb" path="res://Scripts/game.gd" id="1_wrm1d"]
+[ext_resource type="Script" uid="uid://c50wxrhjn2wd" path="res://Scripts/animations.gd" id="2_3dryh"]
+[ext_resource type="Script" uid="uid://rd0c54eerm4v" path="res://Scripts/stats.gd" id="3_3dryh"]
+[ext_resource type="Script" uid="uid://bd1ms0w8e08vh" path="res://Scripts/animationsRightPanel.gd" id="5_i6g32"]
+[ext_resource type="Texture2D" uid="uid://cc1j557fgxk86" path="res://Images/Sanduiche Natural.png" id="5_wowpa"]
+[ext_resource type="Texture2D" uid="uid://b45s5eplnmy45" path="res://Images/academia.png" id="7_1l0tm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1d"]
+bg_color = Color(0.120133825, 0.6277456, 0.97024685, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
+bg_color = Color(9.62615e-08, 0.39896342, 0.6448875, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wowpa"]
+content_margin_left = 50.0
+content_margin_top = 5.0
+content_margin_right = 50.0
+content_margin_bottom = 5.0
+bg_color = Color(5.390644e-06, 0.5217663, 0.83565336, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6g32"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.52156866, 0.8352941, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v158k"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.52156866, 0.8352941, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1l0tm"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.52156866, 0.8352941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6g32"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h4fw4"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.52156866, 0.8352941, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldgsr"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.52156866, 0.8352941, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5yvi"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0.52156866, 0.8352941, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wrm1d")
+
+[node name="LeftPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(825, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wrm1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+script = ExtResource("2_3dryh")
+
+[node name="Stats" type="VBoxContainer" parent="LeftPanel/MarginContainer"]
+layout_mode = 2
+script = ExtResource("3_3dryh")
+
+[node name="HealtyPointsLabel" type="Label" parent="LeftPanel/MarginContainer/Stats"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
+text = "0 Healthy Points"
+horizontal_alignment = 1
+
+[node name="HealtyPointsPerSecond" type="Label" parent="LeftPanel/MarginContainer/Stats"]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 33
+text = "1 Per Second"
+horizontal_alignment = 1
+
+[node name="Kilograms" type="Label" parent="LeftPanel/MarginContainer/Stats"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 25
+text = "150 / 80 Kg"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="LeftPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="ClickButton" type="TextureButton" parent="LeftPanel/MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(300, 250)
+layout_mode = 2
+texture_normal = ExtResource("1_ebmjs")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="RightPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -327.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3dryh")
+script = ExtResource("5_i6g32")
+
+[node name="ShopLabel" type="Label" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.0
+offset_top = 20.0
+offset_right = 102.0
+offset_bottom = 89.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 43
+theme_override_styles/normal = SubResource("StyleBoxFlat_wowpa")
+text = "Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SanduicheButton" type="Button" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = 0.356
+anchor_right = 0.49800003
+anchor_bottom = 0.356
+offset_left = -127.84601
+offset_top = -33.688004
+offset_right = 128.15399
+offset_bottom = 33.311996
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_i6g32")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v158k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1l0tm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_i6g32")
+text = "100 Hp
+Sanduiche Natural
++1 Hp Por Click"
+icon = ExtResource("5_wowpa")
+expand_icon = true
+
+[node name="ExerciciosButton" type="Button" parent="RightPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.521
+anchor_right = 0.5
+anchor_bottom = 0.521
+offset_left = -126.5
+offset_top = -33.608032
+offset_right = 129.5
+offset_bottom = 33.391968
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_h4fw4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ldgsr")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o5yvi")
+text = "120 Hp
+Academia
++1 Hp Per Second"
+icon = ExtResource("7_1l0tm")
+expand_icon = true
+
+[connection signal="healtyPointsChanged" from="." to="LeftPanel/MarginContainer/Stats" method="_on_game_healty_points_changed"]
+[connection signal="hpPerSecondChanged" from="." to="LeftPanel/MarginContainer/Stats" method="_on_game_hp_per_second_changed"]
+[connection signal="button_down" from="LeftPanel/MarginContainer/CenterContainer/ClickButton" to="." method="_on_click_button_button_down"]
+[connection signal="button_down" from="LeftPanel/MarginContainer/CenterContainer/ClickButton" to="LeftPanel/MarginContainer" method="_on_click_button_button_down"]
+[connection signal="button_up" from="LeftPanel/MarginContainer/CenterContainer/ClickButton" to="LeftPanel/MarginContainer" method="_on_click_button_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="RightPanel/SanduicheButton" to="." method="_on_sanduiche_button_button_down"]
+[connection signal="button_down" from="RightPanel/SanduicheButton" to="RightPanel" method="_on_sanduiche_button_button_down"]
+[connection signal="button_up" from="RightPanel/SanduicheButton" to="RightPanel" method="_on_sanduiche_button_button_up"]
+[connection signal="button_down" from="RightPanel/ExerciciosButton" to="." method="_on_exercicios_button_button_down"]
